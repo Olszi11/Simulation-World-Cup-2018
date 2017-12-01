@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Cup Simulation</title>
+
+  <!-- Bootstrap -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/app2.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!--NAVIGATION-->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+        <span class="navbar-brand" href="#">World Cup Simulation</span><img class="img-responsive" src="images/worldcup.png">
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#team">Poland Team</a></li>
+          <li><a href="#simulation">Simulation</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#photos">Photos</a></li><br>
+              <li><a href="#films">Films</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END NAVIGATION-->
+
+  <!--HEADER-->
+  <div id="header" class="header">
+    <div id="carousel-example-generic2" class="carousel slide header">
+      <!-- Wskaźniki w postaci kropek -->
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic2" data-slide-to="5"></li>
+      </ol> -->
+
+      <!-- Slajdy -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/polska1.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/polska7.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/polska3.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/polska4.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/polska5.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/polska6.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- Strzałki do przewijania -->
+      <a class="left carousel-control" href="#carousel-example-generic2" data-slide="prev">
+      <span class="icon-prev"></span>
+    </a>
+      <a class="right carousel-control" href="#carousel-example-generic2" data-slide="next">
+      <span class="icon-next"></span>
+    </a>
+    </div>
+  </div>
+  <!--END HEADER-->
+
+  <!--POLAND TEAM-->
+  <div id="team" class="team">
+    <div class="container">
+      <h2 class="wow fadeInDown">Poland National Team</h2>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn" data-wow-delat="0.8s">
+          <b class="center-block">Coach</b><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn">
+          <img src="images/nawalka.jpg" class="img-circle" alt="">
+          <h2>Adam Nawałka</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn" data-wow-delat="0.8s">
+          <b class="center-block">Goalkeepers</b><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/fabianski.jpg" class="img-rounded" alt="">
+          <h3>Łukasz Fabiański</h3>
+          <h4>22</h4>
+          <p>Date of birth: 18.04.1985<br>Club: Swansea FC<br>matches/goals: 41/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12  wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/skorupski.jpg" class="img-rounded" alt="">
+          <h3>Łukasz Skorupski</h3>
+          <h4>12</h4>
+          <p>Date of birth: 05.05.1991<br>Club: AS Roma<br>matches/goals: 1/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/szczesny.jpg" class="img-rounded" alt="">
+          <h3>Wojciech Szczęsny</h3>
+          <h4>1</h4>
+          <p>Date of birth: 18.04.1990<br>Club: Juventus FC<br>matches/goals: 31/0</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 wow fadeIn" data-wow-delat="0.8s">
+          <b class="center-block">Defenders</b><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/bereszynski.jpg" class="img-rounded" alt="">
+          <h3>Bartosz Bereszyński</h3>
+          <h4>14</h4>
+          <p>Date of birth: 12.07.1992<br>Club: UC Sampdoria<br>matches/goals: 5/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/cionek.jpg" class="img-rounded" alt="">
+          <h3>Thiago Cionek</h3>
+          <h4>4</h4>
+          <p>Date of birth: 21.04.1986<br>Club: Palermo<br>matches/goals: 13/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12  wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/glik.jpg" class="img-rounded" alt="">
+          <h3>Kamil Glik</h3>
+          <h4>15</h4>
+          <p>Date of birth: 03.02.1988<br>Club: AS Monaco<br>matches/goals: 55/4</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.6s">
+          <img src="images/jedrzejczyk.jpg" class="img-rounded" alt="">
+          <h3>Artur Jędrzejczyk</h3>
+          <h4>3</h4>
+          <p>Date of birth: 04.11.1987<br>Club: Legia Warszawa<br>matches/goals: 31/3</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/kaminski.jpg" class="img-rounded" alt="">
+          <h3>Marcin Kamiński</h3>
+          <h4>17</h4>
+          <p>Date of birth: 15.01.1992<br>Club: VfB Stuttgart<br>matches/goals: 4/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/pazdan.jpg" class="img-rounded" alt="">
+          <h3>Michał Pazdan</h3>
+          <h4>2</h4>
+          <p>Date of birth: 21.09.1987<br>Club: Legia Warszawa<br>matches/goals: 30/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/piszczek.jpg" class="img-rounded" alt="">
+          <h3>Łukasz Piszczek</h3>
+          <h4>20</h4>
+          <p>Date of birth: 03.06.1985<br>Club: Borussia Dortmund<br>matches/goals: 59/3</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.6s">
+          <img src="images/rybus.jpg" class="img-rounded" alt="">
+          <h3>Maciej Rybus</h3>
+          <h4>13</h4>
+          <p>Date of birth: 19.08.1989<br>Club: Lokomotiv Moskwa<br>matches/goals: 46/2</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn" data-wow-delat="0.8s">
+          <b class="center-block">Midfielders</b><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/kuba.jpg" class="img-rounded" alt="">
+          <h3>Jakub Błaszczykowski</h3>
+          <h4>16</h4>
+          <p>Date of birth: 14.12.1985<br>Club: VfL Wolfsburg<br>matches/goals: 95/19</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/goralski.jpg" class="img-rounded" alt="">
+          <h3>Jacek Góralski</h3>
+          <h4>6</h4>
+          <p>Date of birth: 21.09.1992<br>Club: Ludogorec Razgrad<br>matches/goals: 1/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/grosicki.jpg" class="img-rounded" alt="">
+          <h3>Kamil Grosicki</h3>
+          <h4>11</h4>
+          <p>Date of birth: 08.06.1988<br>Club: Hull City A.F.C.<br>matches/goals: 54/11</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.6s">
+          <img src="images/krychowiak.jpg" class="img-rounded" alt="">
+          <h3>Grzegorz Krychowiak</h3>
+          <h4>10</h4>
+          <p>Date of birth: 29.01.1990<br>Club: West Bromwich Albion F.C.<br>matches/goals: 47/2</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/linetty.jpg" class="img-rounded" alt="">
+          <h3>Karol Linetty</h3>
+          <h4>8</h4>
+          <p>Date of birth: 02.02.1995<br>Club: UC Sampdoria<br>matches/goals: 17/1</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/maczynski.jpg" class="img-rounded" alt="">
+          <h3>Krzysztof Mączyński</h3>
+          <h4>5</h4>
+          <p>Date of birth: 23.05.1987<br>Club: Legia Warszawa<br>matches/goals: 28/2</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/makuszewski.jpg" class="img-rounded" alt="">
+          <h3>Maciej Makuszewski</h3>
+          <h4>18</h4>
+          <p>Date of birth: 29.09.1989<br>Club: Lech Poznań<br>matches/goals: 3/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/wolski.jpg" class="img-rounded" alt="">
+          <h3>Rafał Wolski</h3>
+          <h4>21</h4>
+          <p>Date of birth: 10.11.1992<br>Club: Lechia Gdańsk<br>matches/goals: 6/1</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1.6s">
+          <img src="images/zielinski.jpg" class="img-rounded" alt="">
+          <h3> Piotr Zieliński</h3>
+          <h4>19</h4>
+          <p>Date of birth: 20.05.1994<br>Club: SSC Napoli<br>matches/goals: 25/3</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 wow fadeIn" data-wow-delat="0.8s">
+          <b class="center-block">Forwards</b><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1s">
+          <img src="images/kownacki.jpg" class="img-rounded" alt="">
+          <h3>Dawid Kownacki</h3>
+          <h4>99</h4>
+          <p>Date of birth: 13.03.1997<br>Club: UC Sampdoria<br>matches/goals: 0/0</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1.2s">
+          <img src="images/milik.jpg" class="img-rounded" alt="">
+          <h3>Arkadiusz Milik</h3>
+          <h4>7</h4>
+          <p>Date of birth: 28.02.1994<br>Club: SSC Napoli<br>matches/goals: 36/12</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="1.4s">
+          <img src="images/lewandowski.jpg" class="img-rounded" alt="">
+          <h3>Robert Lewandowski</h3>
+          <h4>9</h4>
+          <p>Date of birth: 21.08.1988<br>Club: Bayern Monachium<br>matches/goals: 91/51</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END POlAND TEAM-->
+
+  <!--SIMULATION -->
+  <div id="simulation" class="simulation">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <img src="images/worldcup.png">
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h1 class="wow fadeInUp">World Cup Simulation</h1>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <img src="images/worldcup.png">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h2 class="wow fadeIn">Group Stage</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group A</h3>
+            <table class="group1 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_1 place name" data-team="t1">Russia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t1" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t1" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_2 place name" data-team="t2">Saudi Arabia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t2" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t2" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_3 place name" data-team="t3">Egypt</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t3" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t3" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_4 place name" data-team="t4">Uruguay</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t4" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t4" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t2" />
+                </td>
+                <td class="team_2_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_3_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t3" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t4" />
+                </td>
+                <td class="team_4_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t3" />
+                </td>
+                <td class="team_3_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_4_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t4" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t2" />
+                </td>
+                <td class="team_2_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_4_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t4" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t1" />
+                </td>
+                <td class="team_1_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_2_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t2" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t3" />
+                </td>
+                <td class="team_3_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group B</h3>
+            <table class="group2 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_5 place name" data-team="t5">Portugal</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t5" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t5" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_6 place name" data-team="t6">Spain</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t6" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t6" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_7 place name" data-team="t7">Marocco</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t7" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t7" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_8 place name" data-team="t8">Iran</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t8" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t8" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_7_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t7" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t8" />
+                </td>
+                <td class="team_8_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_5_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t5" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t6" />
+                </td>
+                <td class="team_6_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_5_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t5" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t7" />
+                </td>
+                <td class="team_7_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_8_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t8" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t6" />
+                </td>
+                <td class="team_6_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_8_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t8" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t5" />
+                </td>
+                <td class="team_5_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_6_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t6" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t7" />
+                </td>
+                <td class="team_7_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group C</h3>
+            <table class="group3 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_9 place name" data-team="t9">France</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t9" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t9" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_10 place name" data-team="t10">Australia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t10" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t10" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_11 place name" data-team="t11">Peru</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t11" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t11" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_12 place name" data-team="t12">Denmark</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t12" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t12" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_9_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t9" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t10" />
+                </td>
+                <td class="team_10_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_11_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t11" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t12" />
+                </td>
+                <td class="team_12_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_9_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t9" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t11" />
+                </td>
+                <td class="team_11_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_12_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t12" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t10" />
+                </td>
+                <td class="team_10_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_12_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t12" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t9" />
+                </td>
+                <td class="team_9_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_10_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t10" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t11" />
+                </td>
+                <td class="team_11_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group D</h3>
+            <table class="group4 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_13 place name" data-team="t13">Argentina</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t13" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t13" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_14 place name" data-team="t14">Iceland</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t14" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t14" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_15 place name" data-team="t15">Croatia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t15" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t15" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_16 place name" data-team="t16">Nigeria</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t16" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t16" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_13_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t13" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t14" />
+                </td>
+                <td class="team_14_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_15_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t15" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t16" />
+                </td>
+                <td class="team_16_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_13_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t13" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t15" />
+                </td>
+                <td class="team_15_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_16_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t16" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t14" />
+                </td>
+                <td class="team_14_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_16_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t16" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t13" />
+                </td>
+                <td class="team_13_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_14_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t14" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t15" />
+                </td>
+                <td class="team_15_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group E</h3>
+            <table class="group5 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_17 place name" data-team="t17">Brazil</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t17" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t17" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_18 place name" data-team="t18">Switzerland</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t18" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t18" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_19 place name" data-team="t19">Cosa Rica</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t19" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t19" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_20 place name" data-team="t20">Serbia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t20" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t20" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_17_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t17" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t18" />
+                </td>
+                <td class="team_18_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_19_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t19" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t20" />
+                </td>
+                <td class="team_20_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_17_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t17" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t19" />
+                </td>
+                <td class="team_19_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_20_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t20" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t18" />
+                </td>
+                <td class="team_18_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_20_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t20" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t17" />
+                </td>
+                <td class="team_17_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_18_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t18" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t19" />
+                </td>
+                <td class="team_19_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group F</h3>
+            <table class="group6 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_21 place name" data-team="t21">Germany</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t21" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t21" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_22 place name" data-team="t22">Mexico</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t22" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t22" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_23 place name" data-team="t23">Sweden</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t23" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t23" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_24 place name" data-team="t24">South Korea</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t24" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t24" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_21_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t21" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t22" />
+                </td>
+                <td class="team_22_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_23_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t23" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t24" />
+                </td>
+                <td class="team_24_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_21_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t21" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t23" />
+                </td>
+                <td class="team_23_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_24_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t24" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t22" />
+                </td>
+                <td class="team_22_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_24_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t24" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t21" />
+                </td>
+                <td class="team_21_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_22_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t22" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t23" />
+                </td>
+                <td class="team_23_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group G</h3>
+            <table class="group7 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_25 place name" data-team="t25">Belgium</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t25" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t25" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_26 place name" data-team="t26">Panama</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t26" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t26" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_27 place name" data-team="t27">Tunisia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t27" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t27" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_28 place name" data-team="t28">England</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t28" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t28" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_25_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t25" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t26" />
+                </td>
+                <td class="team_26_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_27_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t27" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t28" />
+                </td>
+                <td class="team_28_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_25_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t25" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t27" />
+                </td>
+                <td class="team_27_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_28_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t28" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t26" />
+                </td>
+                <td class="team_26_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_28_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t28" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t25" />
+                </td>
+                <td class="team_25_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_26_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t26" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t27" />
+                </td>
+                <td class="team_27_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="groups">
+            <h3>Group H</h3>
+            <table class="group8 table-responsive">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Matches</th>
+                  <th>Points</th>
+                  <th>Wins</th>
+                  <th>Draws</th>
+                  <th>Looses</th>
+                  <th>GS+</th>
+                  <th>GL-</th>
+                  <th>GB+/-</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="team_29 place name" data-team="t29">Poland</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t29" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t29" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_30 place name" data-team="t30">Senegal</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t30" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t30" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="team_31 place name" data-team="t31">Columbia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t31" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t31" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="team_32 place name" data-team="t32">Japonia</td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_matches_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_points_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_wins_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_draws_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_looses_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_sc_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_goals_lo_t32" />
+                  </td>
+                  <td>
+                    <input type="text" value="0" class="editbox1" readonly id="number_bg_t32" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="match">
+            <table class="matches">
+              <tr>
+                <td class="team_29_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t29" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t30" />
+                </td>
+                <td class="team_30_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_31_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t31" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t32" />
+                </td>
+                <td class="team_32_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_29_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t29" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t31" />
+                </td>
+                <td class="team_31_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_32_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t32" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t30" />
+                </td>
+                <td class="team_30_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_32_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t32" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t29" />
+                </td>
+                <td class="team_29_match"></td>
+              </tr>
+
+              <tr>
+                <td class="team_30_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t30" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox" data-team="t31" />
+                </td>
+                <td class="team_31_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h2 class="wow fadeIn">1/8 FINAL</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="oneeight-match">
+            <table class="oneeight-final">
+              <tr>
+                <td class="oneeight_team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight2" />
+                </td>
+                <td class="oneeight_team_2_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_3_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight3" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight4" />
+                </td>
+                <td class="oneeight_team_4_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_5_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight5" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight6" />
+                </td>
+                <td class="oneeight_team_6_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_7_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight7" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight8" />
+                </td>
+                <td class="oneeight_team_8_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_9_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight9" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight10" />
+                </td>
+                <td class="oneeight_team_10_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_11_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight11" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight12" />
+                </td>
+                <td class="oneeight_team_12_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_13_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight13" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight14" />
+                </td>
+                <td class="oneeight_team_14_match"></td>
+              </tr>
+
+              <tr>
+                <td class="oneeight_team_15_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight15" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox2" data-team="eight16" />
+                </td>
+                <td class="oneeight_team_16_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h2 class="wow fadeIn">1/4 FINAL</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="onefour-match">
+            <table class="onefour-final">
+              <tr>
+                <td class="onefour_team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four2" />
+                </td>
+                <td class="onefour_team_2_match"></td>
+              </tr>
+
+              <tr>
+                <td class="onefour_team_3_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four3" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four4" />
+                </td>
+                <td class="onefour_team_4_match"></td>
+              </tr>
+
+              <tr>
+                <td class="onefour_team_5_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four5" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four6" />
+                </td>
+                <td class="onefour_team_6_match"></td>
+              </tr>
+
+              <tr>
+                <td class="onefour_team_7_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four7" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox3" data-team="four8" />
+                </td>
+                <td class="onefour_team_8_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h2 class="wow fadeIn">1/2 FINAL</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="onetwo-match">
+            <table class="onetwo-final">
+              <tr>
+                <td class="onetwo_team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox4" data-team="two1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox4" data-team="two2" />
+                </td>
+                <td class="onetwo_team_2_match"></td>
+              </tr>
+
+              <tr>
+                <td class="onetwo_team_3_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox4" data-team="two3" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox4" data-team="two4" />
+                </td>
+                <td class="onetwo_team_4_match"></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h2 class="wow fadeIn">FINAL</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="final-match">
+            <table class="final">
+              <tr>
+                <td class="final_team_1_match"></td>
+                <td>
+                  <input type="text" value="" class="editbox5" data-team="final1" />
+                </td>
+                <td>
+                  <input type="text" value="" class="editbox5" data-team="final2" />
+                </td>
+                <td class="final_team_2_match"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SIMULATION-->
+
+  <!--GALLERY-->
+  <!--Photos-->
+  <div id="photos" class="photos">
+    <div class="container">
+      <div class="row">
+        <h2 class="wow fadeInUp">Gallery</h2>
+        <h3 class="wow fadeInUp" data-wow-delay="0.4"> Photos</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska1.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska2.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska3.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska4.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska5.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska6.jpg" class="img-thumbnail" /></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska7.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska8.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska9.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska10.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska11.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska12.jpg" class="img-thumbnail" /></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska13.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska14.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska15.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska16.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska17.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska18.jpg" class="img-thumbnail" /></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska19.jpeg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska20.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska21.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska22.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska23.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska24.jpg" class="img-thumbnail" /></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska25.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska26.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska27.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska28.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska29.jpg" class="img-thumbnail" /></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" id="gallery">
+          <div class="gallery-item"><img src="images/polska30.jpg" class="img-thumbnail" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Poland National Team</h4>
+        </div>
+        <div class="modal-body">
+          <img id="modal-image" class="img-responsive" src=""><br/>
+          <nav class="but"></nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Films-->
+  <div id="films" class="films">
+    <div class="container">
+      <div class="row">
+        <h3 class="wow fadeInUp" data-wow-delay="0.4"> Films</3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film1.png" class="img-thumbnail" /></a>
+          <p>Poland 0:0 Uruguay - Boruc final game for Poland</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film2.png" class="img-thumbnail" /></a>
+          <p>King Artur</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film3.png" class="img-thumbnail" /></a>
+          <p>Promotion to World Cup 2016</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film4.png" class="img-thumbnail" /></a>
+          <p>Elimination World Cup Russia 2018</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film5.png" class="img-thumbnail" /></a>
+          <p>Poland National Team on Euro 2016</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film6.png" class="img-thumbnail" /></a>
+          <p>Elimination Euro France 2016</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film7.png" class="img-thumbnail" /></a>
+          <p>Początek - film about elimination Euro 2016</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film8.png" class="img-thumbnail" /></a>
+          <p>Promotion to Euro 2016</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <a href="#myModal2" data-toggle="modal"><img class="img-film" src="images/film9.png" class="img-thumbnail" /></a>
+          <p>Poland 2:0 Germany</p>
+        </div>
+      </div>
+
+      <!-- Modal-->
+      <div id="myModal2" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Poland National Team</h4>
+            </div>
+            <div class="modal-body">
+              <iframe id="cartoonVideo" width="660" height="415" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END GALLERY-->
+
+
+
+  <!--FOOTER-->
+  <div id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <p class="pull-left">World Cup Russia 2018 - Simulation&reg;<img src="images/worldcup.png"/> </p>
+          </div>
+          <div class="col-lg-6 col-md-6 ">
+            <a href="https://www.facebook.com/LaczyNasPilka/" target="_blank"><i class="social pull-right fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/laczynaspilka?lang=pl" target="_blank"><i class="social pull-right fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/laczynaspilka/?hl=pl" target="_blank"><i class="social pull-right fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/user/LaczyNasPilka" target="_blank"><i class="social pull-right fa fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
