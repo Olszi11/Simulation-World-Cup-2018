@@ -53,7 +53,10 @@ $(function() {
   /* group stage */
   var tab = 0;
   tabBox.on("change", function(event) {
-
+    tabBox2.val("");
+    tabBox3.val("");
+      tabBox4.val("");
+        tabBox5.val("");
     tab = tab + 1;
 
     for (var i = 1; i <= 32; i++) {
@@ -257,6 +260,9 @@ $(function() {
 
   var tab1 = 0;
   tabBox2.on("change", function(event) {
+    tabBox3.val("");
+      tabBox4.val("");
+        tabBox5.val("");
 
     tab1 = tab1 + 1;
 
@@ -287,6 +293,8 @@ $(function() {
 
   var tab2 = 0;
   tabBox3.on("change", function(event) {
+    tabBox4.val("");
+      tabBox5.val("");
     tab2 = tab2 + 1;
     if (tab2 < 8) {
       for (var j = 0; j < 8; j++) {
@@ -316,6 +324,7 @@ $(function() {
 
   var tab3 = 0;
   tabBox4.on("change", function(event) {
+    tabBox5.val("");
     tab3 = tab3 + 1;
     if (tab3 < 4) {
       for (var j = 0; j < 4; j++) {
