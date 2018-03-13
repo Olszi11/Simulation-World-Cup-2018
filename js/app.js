@@ -1,41 +1,41 @@
 $(function() {
 
-  var tabBox = $(".editbox");
-  var tabBox2 = $(".editbox2");
-  var tabBox3 = $(".editbox3");
-  var tabBox4 = $(".editbox4");
-  var tabBox5 = $(".editbox5");
+  let tabBox = $(".editbox");
+  let tabBox2 = $(".editbox2");
+  let tabBox3 = $(".editbox3");
+  let tabBox4 = $(".editbox4");
+  let tabBox5 = $(".editbox5");
 
-
-  /* PRZEKAZANIE WARTOSCI Z TABELI DO WARTOSCI MECZOW */
-  for (var i = 1; i <= 32; i++) {
+  /* group stage to playoffs*/
+  for (let i = 1; i <= 32; i++) {
     ($(".team_" + i + "_match")).text(($(".team_" + i).text()));
   }
 
-  for (var i = 1; i <= 16; i++) {
+  for (let i = 1; i <= 16; i++) {
     $(".oneeight_team_" + i + "_match").text("?");
   }
 
-  for (var i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 8; i++) {
     $(".onefour_team_" + i + "_match").text("?");
   }
 
-  for (var i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 4; i++) {
     $(".onetwo_team_" + i + "_match").text("?");
   }
 
-  for (var i = 1; i <= 2; i++) {
+  for (let i = 1; i <= 2; i++) {
     $(".final_team_" + i + "_match").text("?");
   }
 
-  /* zerowanie wszystkich elementow */
+  /* clear elements */
   function startField() {
     tabBox.val("");
     tabBox2.val("");
     tabBox3.val("");
     tabBox4.val("");
     tabBox5.val("");
-    for (var i = 1; i <= 32; i++) {
+
+    for (let i = 1; i <= 32; i++) {
       $("#number_matches_t" + i).val(0);
       $("#number_points_t" + i).val(0);
       $("#number_wins_t" + i).val(0);
@@ -44,22 +44,20 @@ $(function() {
       $("#number_goals_sc_t" + i).val(0)
       $("#number_goals_lo_t" + i).val(0)
       $("#number_bg_t" + i).val(0)
-
     }
-
   }
   startField();
 
   /* group stage */
-  var tab = 0;
+  let tab = 0;
   tabBox.on("change", function(event) {
     tabBox2.val("");
     tabBox3.val("");
-      tabBox4.val("");
-        tabBox5.val("");
+    tabBox4.val("");
+    tabBox5.val("");
     tab = tab + 1;
 
-    for (var i = 1; i <= 32; i++) {
+    for (let i = 1; i <= 32; i++) {
       $("#number_wins_t" + i).val(0);
       $("#number_draws_t" + i).val(0);
       $("#number_looses_t" + i).val(0);
@@ -71,28 +69,28 @@ $(function() {
     }
 
     function points() {
-      for (var i = 1; i <= 32; i++) {
+      for (let i = 1; i <= 32; i++) {
         $("#number_points_t" + i).val(3 * Number($("#number_wins_t" + i).val()) + 1 * Number($("#number_draws_t" + i).val()));
       }
     }
 
     function matches() {
-      for (var i = 1; i <= 32; i++) {
+      for (let i = 1; i <= 32; i++) {
         $("#number_matches_t" + i).val(Number($("#number_wins_t" + i).val()) + Number($("#number_draws_t" + i).val()) + Number($("#number_looses_t" + i).val()));
       }
     }
 
     function goalbalance() {
-      for (var i = 1; i <= 32; i++) {
+      for (let i = 1; i <= 32; i++) {
         $("#number_bg_t" + i).val(Number($("#number_goals_sc_t" + i).val()) - Number($("#number_goals_lo_t" + i).val()));
       }
     }
 
-    for (var i = 0; i < 48; i++) {
-      var valueBox1 = tabBox[i * 2].value; //0,2,4,6
-      var valueBox2 = tabBox[(i * 2) + 1].value; //1,3,5,7
-      var string = tabBox[i * 2].getAttribute("data-team");
-      var string2 = tabBox[(i * 2) + 1].getAttribute("data-team");
+    for (let i = 0; i < 48; i++) {
+      let valueBox1 = tabBox[i * 2].value;
+      let valueBox2 = tabBox[(i * 2) + 1].value;
+      let string = tabBox[i * 2].getAttribute("data-team");
+      let string2 = tabBox[(i * 2) + 1].getAttribute("data-team");
 
       if (Number(valueBox1) == "" && Number(valueBox2) == "") {
         $("#number_wins_" + string).val(Number($("#number_wins_" + string).val()) + 0);
@@ -157,7 +155,7 @@ $(function() {
     }
 
     function sortTable(num) {
-      var table,
+      let table,
         rows,
         switching,
         i,
@@ -188,14 +186,14 @@ $(function() {
           x2 = rows[i].getElementsByTagName("td")[6];
           y2 = rows[i + 1].getElementsByTagName("td")[6];
 
-          var xx = x.firstElementChild.value;
-          var yy = y.firstElementChild.value;
+          let xx = x.firstElementChild.value;
+          let yy = y.firstElementChild.value;
 
-          var gbx = x1.lastElementChild.value;
-          var gby = y1.lastElementChild.value;
+          let gbx = x1.lastElementChild.value;
+          let gby = y1.lastElementChild.value;
 
-          var gsx = x2.firstElementChild.value;
-          var gsy = y2.firstElementChild.value;
+          let gsx = x2.firstElementChild.value;
+          let gsy = y2.firstElementChild.value;
 
           //check if the two rows should switch place:
 
@@ -228,15 +226,15 @@ $(function() {
     }
 
     /* 1/8 final */
-    //if (tab < 96) {
-    for (var j = 0; j < 96; j++) {
+
+    for (let j = 0; j < 96; j++) {
       if (tabBox[j].value === "") {
-        for (var i = 1; i <= 16; i++) {
+        for (let i = 1; i <= 16; i++) {
           $(".oneeight_team_" + i + "_match").text("?");
         }
       }
-      //  }
-      else /*if (tab >= 96)*/ {
+
+      else {
         $(".oneeight_team_1_match").text($(".group1").find("tr").eq(1).children().eq(0).text()) //1A
         $(".oneeight_team_3_match").text($(".group3").find("tr").eq(1).children().eq(0).text()) //1C
         $(".oneeight_team_5_match").text($(".group5").find("tr").eq(1).children().eq(0).text()) //1E
@@ -258,26 +256,26 @@ $(function() {
   });
 
 
-  var tab1 = 0;
+  let tab1 = 0;
   tabBox2.on("change", function(event) {
     tabBox3.val("");
-      tabBox4.val("");
-        tabBox5.val("");
+    tabBox4.val("");
+    tabBox5.val("");
 
     tab1 = tab1 + 1;
 
     if (tab1 < 16) {
-      for (var j = 0; j < 16; j++) {
+      for (let j = 0; j < 16; j++) {
         if (tabBox2[j].value === "") {
-          for (var k = 1; k <= 8; k++) {
+          for (let k = 1; k <= 8; k++) {
             $(".onefour_team_" + k + "_match").text("?");
           }
         }
       }
     } else if (tab1 >= 16) {
-      for (var i = 0; i < 8; i++) {
-        var oneEightValueBox1 = tabBox2[i * 2].value;
-        var oneEightValueBox2 = tabBox2[(i * 2) + 1].value;
+      for (let i = 0; i < 8; i++) {
+        let oneEightValueBox1 = tabBox2[i * 2].value;
+        let oneEightValueBox2 = tabBox2[(i * 2) + 1].value;
         if (Number(oneEightValueBox1) > Number(oneEightValueBox2)) {
           $(".onefour_team_" + (i + 1) + "_match").text($(".oneeight_team_" + ((i * 2) + 1) + "_match").text());
         } else if (Number(oneEightValueBox1) === Number(oneEightValueBox2)) {
@@ -291,24 +289,24 @@ $(function() {
   });
 
 
-  var tab2 = 0;
+  let tab2 = 0;
   tabBox3.on("change", function(event) {
     tabBox4.val("");
-      tabBox5.val("");
+    tabBox5.val("");
     tab2 = tab2 + 1;
     if (tab2 < 8) {
-      for (var j = 0; j < 8; j++) {
+      for (let j = 0; j < 8; j++) {
         if (tabBox3[j].value === "") {
-          for (var k = 1; k <= 4; k++) {
+          for (let k = 1; k <= 4; k++) {
             $(".onetwo_team_" + k + "_match").text("?");
           }
         }
       }
     } else if (tab2 >= 8) {
 
-      for (var i = 0; i < 4; i++) {
-        var oneFourValueBox1 = tabBox3[i * 2].value;
-        var oneFourValueBox2 = tabBox3[(i * 2) + 1].value;
+      for (let i = 0; i < 4; i++) {
+        let oneFourValueBox1 = tabBox3[i * 2].value;
+        let oneFourValueBox2 = tabBox3[(i * 2) + 1].value;
         if (Number(oneFourValueBox1) > Number(oneFourValueBox2)) {
           $(".onetwo_team_" + (i + 1) + "_match").text($(".onefour_team_" + ((i * 2) + 1) + "_match").text());
         } else if (Number(oneFourValueBox1) === Number(oneFourValueBox2)) {
@@ -322,24 +320,24 @@ $(function() {
 
   });
 
-  var tab3 = 0;
+  let tab3 = 0;
   tabBox4.on("change", function(event) {
     tabBox5.val("");
     tab3 = tab3 + 1;
     if (tab3 < 4) {
-      for (var j = 0; j < 4; j++) {
+      for (let j = 0; j < 4; j++) {
         if (tabBox4[j].value === "") {
-          for (var k = 1; k <= 2; k++) {
+          for (let k = 1; k <= 2; k++) {
             $(".final_team_" + k + "_match").text("?");
           }
         }
       }
     } else if (tab3 >= 4) {
 
-      for (var i = 0; i < 2; i++) {
+      for (let i = 0; i < 2; i++) {
 
-        var oneTwoValueBox1 = tabBox4[i * 2].value;
-        var oneTwoValueBox2 = tabBox4[(i * 2) + 1].value;
+        let oneTwoValueBox1 = tabBox4[i * 2].value;
+        let oneTwoValueBox2 = tabBox4[(i * 2) + 1].value;
         if (Number(oneTwoValueBox1) > Number(oneTwoValueBox2)) {
           $(".final_team_" + (i + 1) + "_match").text($(".onetwo_team_" + ((i * 2) + 1) + "_match").text());
         } else if (Number(oneTwoValueBox1) === Number(oneTwoValueBox2)) {
@@ -354,8 +352,8 @@ $(function() {
 
 
   tabBox5.on("change", function(event) {
-    var FinalValueBox1 = tabBox5[0].value;
-    var FinalValueBox2 = tabBox5[1].value;
+    let FinalValueBox1 = tabBox5[0].value;
+    let FinalValueBox2 = tabBox5[1].value;
     if ((Number(FinalValueBox1) > Number(FinalValueBox2)) && (tabBox5[0].value != "") && (tabBox5[1].value != "")) {
       alert("World Cup winner is " + $(".final_team_1_match").text())
     } else if (Number(FinalValueBox1) === Number(FinalValueBox2)) {
@@ -369,14 +367,11 @@ $(function() {
 
 
   /*Gallery*/
-
-
   $('.gallery-item').on('click', function() {
-    ths = $(this);
-    var num_thumbnails = $('.gallery-item').children().length; //dlugosc gallery-item
-    var srcImg = ths.children('img').attr('src'); //pobieram wartosc src
-    //var clicked_thumbnail_index = $($('.gallery-item')).index(this);
-    var clicked_thumbnail_index = $(".gallery-item").index(ths); //pobieram index ths
+    let ths = $(this);
+    let num_thumbnails = $('.gallery-item').children().length;
+    let srcImg = ths.children('img').attr('src');
+    let clicked_thumbnail_index = $(".gallery-item").index(ths);
 
     if (num_thumbnails > 1) {
       $('.but').html('<a id="prev" class="previous new-color"> <i class="fa fa-arrow-left" aria-hidden="true"></i>  </a> <a id="next" class="next new-color">  <i class="fa fa-arrow-right" aria-hidden="true"></i>   </a>')
@@ -393,7 +388,7 @@ $(function() {
       if (clicked_thumbnail_index >= num_thumbnails) {
         clicked_thumbnail_index = 0;
       }
-      var next_sibling = $(".gallery-item").eq(clicked_thumbnail_index).children("img").attr("src");
+      let next_sibling = $(".gallery-item").eq(clicked_thumbnail_index).children("img").attr("src");
       $('#modal-image').attr('src', next_sibling);
     });
 
@@ -404,14 +399,14 @@ $(function() {
       if (clicked_thumbnail_index < 0) {
         clicked_thumbnail_index = (num_thumbnails - 1);
       }
-      var next_sibling = $(".gallery-item").eq(clicked_thumbnail_index).children("img").attr("src");
+      let next_sibling = $(".gallery-item").eq(clicked_thumbnail_index).children("img").attr("src");
       $('#modal-image').attr('src', next_sibling);
     });
   });
 
 
 
-  var src = ["https://www.youtube.com/embed/2eERLR5RsT8",
+  let src = ["https://www.youtube.com/embed/2eERLR5RsT8",
     "https://www.youtube.com/embed/Kb68up5EidA",
     "https://www.youtube.com/embed/xRsityRoV1Q",
     "https://www.youtube.com/embed/K7Hze--NZ2c",
@@ -422,8 +417,8 @@ $(function() {
     "https://www.youtube.com/embed/tLJTTHNqZdU"
   ];
 
-  var num_img = $(".img-film");
-  var url = $("#cartoonVideo").attr('src');
+  let num_img = $(".img-film");
+  let url = $("#cartoonVideo").attr('src');
 
   $("#myModal2").on('hide.bs.modal', function() {
     $("#cartoonVideo").attr('src', '');
@@ -432,7 +427,7 @@ $(function() {
 
   num_img.on("click", function() {
     ths = $(this);
-    var clicked = $(".img-film").index(ths); //pobieram index
+    let clicked = $(".img-film").index(ths); 
     $("#myModal2").on('show.bs.modal', function() {
       $("#cartoonVideo").attr('src', src[clicked]);
     });

@@ -153,13 +153,6 @@ p {
   object-fit: cover;
 }
 
-/*@media (min-width: 768px) {
-  @media (min-width: 992px) {
-@media (min-width: 1200px) {
-  @media screen and (max-width: 767px) {
-    @media (min-width: 768px) and (max-width: 991px) {
-      @media (min-width: 992px) and (max-width: 1199px) {*/
-
 /*SIMULATION*/
 
 .simulation {
@@ -239,7 +232,7 @@ p {
   text-align: center;
 }
 
-/*faza pucharowa*/
+/*play offs*/
 
 .match {
   margin: 10px 0 20px;
@@ -357,12 +350,10 @@ p {
   .group1 tr, .group1 td, .group2 tr, .group2 td, .group3 tr, .group3 td, .group4 tr, .group4 td, .group5 tr, .group5 td, .group6 tr, .group6 td, .grou7 tr, .group7 td, .group8 tr, .group8 td {
     font-size: 12px;
     padding: 7px;
-
   }
 
   .group1 .name, .group2 .name, .group3 .name, .group4 .name, .group5 .name, .group6 .name, .group7 .name, .group8 .name {
     font-size: 14px;
-
   }
 
 
